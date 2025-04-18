@@ -110,7 +110,7 @@
             width: 120px;
             border-radius: 20px;
             border: 2px solid #ffe57b;
-            background: #fffae6;
+            background: #fff2bd;
             margin-right: 5%;
         }
         .back-btn:hover {
@@ -151,9 +151,16 @@
             outline: none;
             border-color: #555;
         }
-        .edit-options {
+
+        .button-container {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .edit-options {
+            display: flex;
+            flex-direction: column;
             align-items: center;
         }
         .edit-button {
@@ -164,10 +171,31 @@
             background-color: #bfd3a6;
             color: black;
             border: none;
-            margin-left: 15px;
+            margin-bottom: 15px;
             font-weight: bold;
         }
         .edit-button:hover {
+            background-color: #97ac7d;
+        }
+
+        .inout-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .inout-button {
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 20px;
+            background-color: #bfd3a6;
+            color: black;
+            border: none;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .inout-button:hover {
             background-color: #97ac7d;
         }
 
@@ -287,14 +315,19 @@
 
     <div class="options-container">
         <div class="dropdown-container">
-            <select id="dateSelect">
-                <option value = "" disabled selected>Select Date</option>
-            </select>
-
+                  <select id="dateSelect">
+                      <option value = "" disabled selected>Select Date</option>
+                  </select>
         </div>
-        <div class="edit-options">
-            <button class="edit-button" onclick="addStudentPopup()" >Add Student</button> 
-            <button class="edit-button" onclick="removeStudentPopup()">Remove Student</button>
+        <div class="button-container">
+            <div class="inout-options">
+                <button class="inout-button">Export Roster</button>
+                <button class="inout-button">Import Students</button>
+            </div>
+            <div class="edit-options">
+                <button class="edit-button" onclick="addStudentPopup()" >Add Student</button> 
+                <button class="edit-button" onclick="removeStudentPopup()">Remove Student</button>
+            </div>
         </div>
     </div>
 
